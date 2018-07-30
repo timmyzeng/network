@@ -1,14 +1,14 @@
-.PHONY:all
+.phony:all
 all:service client
 
-FLAGS=-Wall
+flags=-Wall
 
 service:service.c
-	gcc -o $@ $^ $(FLAGS)
+	gcc -o $@ $^ $(flags)
 client:client.c
-	gcc -o $@ $^ $(FLAGS)
+	gcc -o $@ $^ $(flags)
 
 
-.PHONY:clean
+.phony:clean
 clean:
 	rm -f service client
